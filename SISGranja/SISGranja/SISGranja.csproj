@@ -242,6 +242,7 @@
     <Content Include="Views\Animales\Create.cshtml" />
     <Content Include="Views\Corrales\Create.cshtml" />
     <Content Include="Views\Corrales\ObservarCorrales.cshtml" />
+    <Content Include="Views\Animales\AsignarCorral.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

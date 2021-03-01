@@ -42,6 +42,19 @@ namespace SISGranja.Controllers
             return View();
         }
 
+        // GET: Animales/Details/5
+        public ActionResult AsignarCorral(Animales animal)
+        {
+            Detalle_animal_corral de = new Detalle_animal_corral
+            {
+                Animal = animal,
+                Id_animal = animal.Id_animal,
+                Id_corral = 0,
+            };
+
+            return View(de);
+        }
+
         // POST: Animales/Create
         [HttpPost]
         public async Task<ActionResult> Create(FormCollection collection)
