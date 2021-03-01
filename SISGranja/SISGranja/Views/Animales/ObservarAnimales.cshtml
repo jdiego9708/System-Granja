@@ -1,0 +1,45 @@
+﻿@model IEnumerable<SISGranja.Common.Models.Animales>
+
+@{
+    ViewBag.Title = "ObservarAnimales";
+}
+
+<h2>ObservarAnimales</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Nombre_animal)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Descripcion_animal)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Estado_animal)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nombre_animal)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Descripcion_animal)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Estado_animal)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id_animal }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id_animal }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id_animal })
+        </td>
+    </tr>
+}
+
+</table>

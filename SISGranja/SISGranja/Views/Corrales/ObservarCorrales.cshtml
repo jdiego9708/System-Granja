@@ -1,0 +1,45 @@
+﻿@model IEnumerable<SISGranja.Common.Models.Corrales>
+
+@{
+    ViewBag.Title = "ObservarCorrales";
+}
+
+<h2>ObservarCorrales</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Nombre_corral)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Descripcion_corral)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Estado_corral)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nombre_corral)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Descripcion_corral)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Estado_corral)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id_corral }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id_corral }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id_corral })
+        </td>
+    </tr>
+}
+
+</table>
